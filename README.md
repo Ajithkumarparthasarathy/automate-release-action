@@ -28,7 +28,7 @@ versioned commit files for these reasons:
 on: 
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -36,7 +36,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: Ajithkumarparthasarathy/automate-release-action@master
+      - uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           bump_version_scheme: minor
 ```
@@ -92,7 +92,7 @@ Example of how to consume this:
 on: 
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -101,7 +101,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - id: release
-        uses: Ajithkumarparthasarathy/automate-release-action@master
+        uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           bump_version_scheme: minor
           tag_prefix: v
@@ -122,7 +122,7 @@ Example:
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -130,7 +130,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: Ajithkumarparthasarathy/automate-release-action@master
+      - uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           bump_version_scheme: minor
           release_body: "When set, adds extra text to body!"
@@ -150,7 +150,7 @@ Example:
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -158,7 +158,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: Ajithkumarparthasarathy/automate-release-action@master
+      - uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           bump_version_scheme: minor
           use_github_release_notes: true
@@ -174,7 +174,7 @@ removing the prefix by using an empty string.
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -182,7 +182,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: Ajithkumarparthasarathy/automate-release-action@master
+      - uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           tag_prefix: ""
 ```
@@ -200,7 +200,7 @@ See example below for how to create a release with the name `Release 1.2.3`
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -208,7 +208,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: Ajithkumarparthasarathy/automate-release-action@master
+      - uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           tag_prefix: "v"
           release_name: "Release <RELEASE_VERSION>"
@@ -222,7 +222,7 @@ Use the option `max_commits`. The default value is 50.
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   release-on-push:
@@ -230,7 +230,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: Ajithkumarparthasarathy/automate-release-action@master
+      - uses: Ajithkumarparthasarathy/automate-release-action@main
         with:
           max_commits: 100
 ```
