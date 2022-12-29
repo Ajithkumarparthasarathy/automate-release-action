@@ -48,10 +48,6 @@ Allowed values of `bump_version_scheme`:
 - patch
 - **norelease**: Performs no release by default. Creation of release delegated to labels on Pull Requests.
 
-For stability, we recommend pinning the version of the action. See [Releases](https://github.com/rymndhng/release-on-push-action/releases).
-
-See [action.yml](./action.yml) for the full list of options.
-
 ## FAQ
 
 ### Can I skip creation of a release?
@@ -64,9 +60,7 @@ There are several approaches:
 
 ### How do I change the bump version scheme using Pull Requests?
 
-Iif the PR has the label `release:major`, `release:minor`, or `release:patch`, this will override `bump_version_scheme`. 
-
-This repository's pull requests are an example of this in action. For example, [#19](https://github.com/rymndhng/release-on-push-action/pull/19).
+if the PR has the label `release:major`, `release:minor`, or `release:patch`, this will override `bump_version_scheme`. 
 
 Only one of these labels should be present on a PR. If there are multiple, the behavior is undefined.
 
@@ -78,9 +72,6 @@ You need to enable `read and write permission` to this token under `settings > a
 ### Can I create a tag instead of a release?
 
 Currently, no.
-
-In order to reliably generate monotonic versions, we use Github Releases to
-track what the last release version is. See [Release#get-the-latest-release](https://developer.github.com/v3/repos/releases/#get-the-latest-release).
 
 ### How can I get the generated tag or version?
 
